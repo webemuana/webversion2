@@ -1,0 +1,116 @@
+import type { LocaleCode } from "@/types";
+
+export const locales: LocaleCode[] = ["es", "en", "fr", "it", "pt"];
+
+export const localeLabels: Record<LocaleCode, string> = {
+  es: "Español",
+  en: "English",
+  fr: "Français",
+  it: "Italiano",
+  pt: "Português",
+};
+
+type Dict = Record<string, string>;
+
+const es: Dict = {
+  "nav.inicio": "Inicio",
+  "nav.agenda": "Agenda",
+  "nav.info": "Info",
+  "nav.directorio": "Directorio",
+  "nav.mas": "Más",
+  "home.countdown": "Comienza en",
+  "home.days": "días",
+  "home.hours": "horas",
+  "home.minutes": "min",
+  "home.nextActivity": "Próxima actividad",
+  "home.noNextActivity": "No hay más actividades hoy",
+  "home.announcements": "Avisos destacados",
+  "home.eventStarted": "¡La convención ya ha comenzado!",
+  "home.eventFinished": "La convención ha finalizado",
+  "agenda.filters": "Filtros",
+  "agenda.allTracks": "Todas",
+  "agenda.now": "Ahora",
+  "agenda.next": "Próxima",
+  "agenda.addToCalendar": "Añadir al calendario",
+  "agenda.speakers": "Ponentes",
+  "agenda.back": "Volver",
+  "info.title": "Información práctica",
+  "info.openMap": "Ver en el mapa",
+  "info.call": "Llamar",
+  "directorio.title": "Directorio",
+  "directorio.search": "Buscar por nombre o empresa",
+  "directorio.speakers": "Ponentes",
+  "directorio.participants": "Participantes",
+  "directorio.empty": "No se han encontrado resultados",
+  "mas.title": "Más",
+  "mas.documentos": "Documentos",
+  "mas.documentosDesc": "Presentaciones y catálogos del evento",
+  "mas.avisos": "Avisos",
+  "mas.avisosDesc": "Todos los avisos publicados",
+  "mas.encuestas": "Encuestas",
+  "mas.encuestasDesc": "Comparte tu opinión sobre el evento",
+  "mas.idioma": "Idioma",
+  "avisos.title": "Avisos",
+  "documentos.title": "Documentos",
+  "documentos.download": "Descargar",
+  "encuestas.title": "Encuestas",
+  "encuestas.open": "Abrir encuesta",
+  "encuestas.external": "Se abre en Microsoft Forms",
+  "common.back": "Volver",
+};
+
+const en: Dict = {
+  "nav.inicio": "Home",
+  "nav.agenda": "Agenda",
+  "nav.info": "Info",
+  "nav.directorio": "Directory",
+  "nav.mas": "More",
+  "home.countdown": "Starts in",
+  "home.days": "days",
+  "home.hours": "hours",
+  "home.minutes": "min",
+  "home.nextActivity": "Next activity",
+  "home.noNextActivity": "No more activities today",
+  "home.announcements": "Highlighted announcements",
+  "home.eventStarted": "The convention has started!",
+  "home.eventFinished": "The convention has ended",
+  "agenda.filters": "Filters",
+  "agenda.allTracks": "All",
+  "agenda.now": "Now",
+  "agenda.next": "Next",
+  "agenda.addToCalendar": "Add to calendar",
+  "agenda.speakers": "Speakers",
+  "agenda.back": "Back",
+  "info.title": "Practical information",
+  "info.openMap": "Open in maps",
+  "info.call": "Call",
+  "directorio.title": "Directory",
+  "directorio.search": "Search by name or company",
+  "directorio.speakers": "Speakers",
+  "directorio.participants": "Participants",
+  "directorio.empty": "No results found",
+  "mas.title": "More",
+  "mas.documentos": "Documents",
+  "mas.documentosDesc": "Presentations and catalogues",
+  "mas.avisos": "Announcements",
+  "mas.avisosDesc": "All published announcements",
+  "mas.encuestas": "Surveys",
+  "mas.encuestasDesc": "Share your feedback about the event",
+  "mas.idioma": "Language",
+  "avisos.title": "Announcements",
+  "documentos.title": "Documents",
+  "documentos.download": "Download",
+  "encuestas.title": "Surveys",
+  "encuestas.open": "Open survey",
+  "encuestas.external": "Opens in Microsoft Forms",
+  "common.back": "Back",
+};
+
+// Para el prototipo, fr/it/pt reutilizan es como base salvo la
+// navegación (evita duplicar 40+ claves x 3 idiomas en la demo,
+// pero la estructura ya soporta añadir la traducción completa).
+const fr: Dict = { ...es, "nav.inicio": "Accueil", "nav.agenda": "Agenda", "nav.info": "Infos", "nav.directorio": "Annuaire", "nav.mas": "Plus" };
+const it: Dict = { ...es, "nav.inicio": "Home", "nav.agenda": "Agenda", "nav.info": "Info", "nav.directorio": "Elenco", "nav.mas": "Altro" };
+const pt: Dict = { ...es, "nav.inicio": "Início", "nav.agenda": "Agenda", "nav.info": "Info", "nav.directorio": "Diretório", "nav.mas": "Mais" };
+
+export const dictionaries: Record<LocaleCode, Dict> = { es, en, fr, it, pt };
